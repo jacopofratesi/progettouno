@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+#define N 5
+int
+main ()
+{
+  int vet[N][N], a,b=0, j = 0, max=0;
+  srand (time (NULL));
+  for (int i = 0; i < N; i++)
+    {
+      cout<<endl <<"riga "<<i+1<< endl;
+      for (j = 0; j < N; j++)
+	{
+	    do{
+	  vet[i][j] = rand () % 32 - 10;
+	  a++;
+	  
+	   
+	  }while(vet[i][j]<0);
+	  cout <<" | "<< vet[i][j] << " | ";
+ if(vet[i][j]<6)
+	   b++;
+
+	}}
+	for(int i=0 ; i<N; i++){
+
+if(max<vet[i][2])
+max=vet[i][2];
+}
+    
+    
+ cout<<endl<<"ha generato "<<a<<" numeri"<<endl;
+ cout<<"ha generato "<<b<<" numeri inferiori a 6"<<endl;
+ cout<<"numero massimo nella terza colonna: " <<max<<endl;
+  return 0;
+}
