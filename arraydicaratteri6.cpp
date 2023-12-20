@@ -34,7 +34,7 @@ main ()
     }
   if(i<j)
   cout<<stringa2<<endl;
-  else
+  if(i>j)
   cout<<stringa1<<endl;
   if(i==j)
   cout<<"le due stringhe hanno pari lunghezza"<<endl;
