@@ -14,7 +14,8 @@ main ()
   int i = 0;
   int j = 0;
   int n = 0;
-  char video;
+  int c=0;
+  char video[N];
   while (stringa[i] != '\0')
     {
        
@@ -26,16 +27,20 @@ main ()
     }
    for(a=0;a<i;a++){
        
-       for (j=a+1;j<i;j++){
+       for (j=0;j<i;j++){
           
-           if(stringa[j]==stringa[a])
-           video=stringa[j];
-        
-          
+           if(stringa[j]==stringa[a]){
+           video[n]=stringa[j];
+           c++;
+        n++;
+           } 
        }
-        cout<<"la parola ripetuta più volte è "<<video<<endl;
+        
    }
- cout<<"la parola ripetuta più volte è "<<video<<endl;
- 
+ cout<<"la lettera ripetuta più volte è: "<<endl;
+ for(a=0;a<n;a++){
+     if(video[a]>video[a+1])
+     cout<<video[a]<<endl;
+ }
   return 0;
 }
