@@ -1,11 +1,12 @@
 #include<iostream>
+#include <fstream>
 #define N 30
 using namespace std;
 
 int
 main ()
 {
-
+ofstream myfile;
   char stringa[N];
   
   cout<<"Inserisci una stringa:"<<endl;
@@ -18,12 +19,10 @@ main ()
  int max = 0;
   char video[N];
   while (stringa[i] != '\0')
-    {
-       
-       
-        
+    {         
       i++;
-     
+      }
+   
      for(a=0;a<i;a++){
        n=0;
        for (j=0;j<i;j++){
@@ -31,21 +30,25 @@ main ()
            if(stringa[j]==stringa[a]){
            
           
-          n++;
+          n++; } 
           //trovo carattere massimo
           if(n>max){
           max=c;
-          video[n]=stringa[max];
+          video[i]=stringa[max];
           }
           
-           } 
+          
        }
         
    }
-    }
    
  
- cout<<"viene ripetuta più volte la lettera: "<<video[n]<<endl;
+ cout<<"viene ripetuta più volte la lettera: "<<video[n]<< "  n: " << n << endl;
 
+  myfile.open ("fileutile.txt");
+  myfile << video[n];
+  myfile.close();
+  cout << video[n];
   return 0;
+
 }
