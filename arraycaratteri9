@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+int
+main ()
+{
+  char stringa1[255], stringa2[255];
+  cout << "Inserire la prima stringa: "  << endl;
+  cin >> stringa1;
+  cout << "Inserire la seconda stringa: "  << endl;
+  cin >> stringa2;
+  int l1 = 0, l2 = 0;
+  int cont = 0;
+  int char_trovato;
+
+  while (stringa1[l1] != '\0')
+    {
+      l1++;
+    }
+  while (stringa2[l2] != '\0')
+    {
+      l2++;
+    }
+
+  for (int i = 0; i < l1; i++)
+    {
+    //  bool char_trovato = false;
+      char_trovato = 0;
+      
+      for (int j = 0; j < i; j++)
+	{
+	  if (stringa1[i] == stringa1[j])
+	    {
+	      // char_trovato = true;
+              char_trovato = 1;
+	    }
+	}
+
+    //  if (char_trovato == false)
+      if (char_trovato == 0)
+	{
+	  int cont1 = 0;
+	  for (int j = i; j < l1; j++)
+	    {
+	      if (stringa1[i] == stringa1[j])
+		{
+		  cont1++;
+		}
+	    }
+	  int cont2 = 0;
+	  for (int j = 0; j < l2; j++)
+	    {
+	      if (stringa1[i] == stringa2[j])
+		{
+		  cont2++;
+		}
+	    }
+          
+	  cout << cont1 << "\t" << cont2 << endl;
+
+	  if (cont1 < cont2)
+	    {
+	      cont = cont + cont1;
+	    }
+	  else
+	    {
+	      cont = cont + cont2;
+	    }
+	}
+    }
+  
+  cout << endl;
+  cout << "I caratteri che compaiono in entrambe le stringhe sono: " << cont << endl;
+  cout << "Programma terminato!" << endl;
+  cout << endl;
+}
