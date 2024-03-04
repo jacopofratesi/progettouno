@@ -6,7 +6,7 @@ using namespace std;
 int
 main ()
 {
-  ifstream primo ("primo.txt");
+  ifstream let1 ("let1.txt");
   ifstream secondo ("secondo.txt");
   ofstream unito ("unito.txt");
   string a, b;
