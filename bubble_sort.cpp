@@ -3,7 +3,7 @@ using namespace std;
 #define N 6
 int main() {
    int vet[N] {0, 7, 5, 2, 8, 1};
-   int max = 0, appo = 0;
+   int appo = 0;
    
    
 for(int i = 0;i<N;i++)
